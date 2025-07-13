@@ -6,8 +6,8 @@ export const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [members, setMembers] = useState([
-    { id: 1, name: 'John Doe' },
-    { id: 2, name: 'Jane Smith' }
+    { id: 1, name: 'Hakim Magdy' },
+    { id: 2, name: 'Clara Moheb' }
   ]);
   const [sports, setSports] = useState([
     { id: 1, name: 'Football' },
