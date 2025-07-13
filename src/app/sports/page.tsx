@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useContext, useState } from 'react';
 import { AppContext } from "../context/AppContext.js";
-// ✅ Correct relative path
+
 
 export default function SportsPage() {
   const { sports, setSports } = useContext(AppContext);
@@ -20,7 +20,6 @@ export default function SportsPage() {
 
   return (
     <div className="relative min-h-screen overflow-auto">
-      {/* 🔵 Blue-black gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-900 via-blue-900 to-black z-0" />
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10 z-10"
@@ -30,12 +29,12 @@ export default function SportsPage() {
         }}
       />
 
-      {/* Content */}
+
       <div className="relative z-20 flex flex-col items-center justify-center px-4 min-h-screen py-10">
         <div className="bg-white bg-opacity-10 backdrop-blur-md text-white p-10 rounded-xl max-w-md w-full shadow-xl text-center">
           <h2 className="text-3xl font-bold mb-6">SPORTS</h2>
 
-          {/* Dropdown toggle button */}
+
           <div className="mb-6 text-left w-full">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -58,7 +57,7 @@ export default function SportsPage() {
             )}
           </div>
 
-          {/* Add Sport */}
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <input
               type="text"
@@ -75,7 +74,7 @@ export default function SportsPage() {
             </button>
           </div>
 
-          {/* Navigation */}
+
           <div className="flex justify-center gap-6 pt-4 text-lg font-medium">
             <Link href="/members" className="hover:underline hover:text-cyan-500 transition">
               Members

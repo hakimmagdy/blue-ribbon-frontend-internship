@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useContext, useState } from 'react';
 import { AppContext } from "../context/AppContext.js";
-// ✅ Correct relative path
+
 
 export default function MembersPage() {
   const { members, setMembers } = useContext(AppContext);
@@ -33,7 +33,7 @@ export default function MembersPage() {
         <div className="bg-white bg-opacity-10 backdrop-blur-md text-white p-10 rounded-xl max-w-md w-full shadow-xl text-center">
           <h2 className="text-3xl font-bold mb-6">MEMBERS</h2>
 
-          {/* Dropdown toggle button */}
+
           <div className="mb-6 text-left w-full">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -56,7 +56,7 @@ export default function MembersPage() {
             )}
           </div>
 
-          {/* Add Member Form */}
+
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -80,7 +80,7 @@ export default function MembersPage() {
             </button>
           </form>
 
-          {/* Navigation Links */}
+
           <div className="flex justify-center gap-6 pt-4 text-lg font-medium">
             <Link href="/sports" className="hover:underline hover:text-cyan-500 transition">
               Sports
